@@ -6,7 +6,7 @@ import traceback
 from contextlib import asynccontextmanager
 from datetime import datetime
 
-＃from core.config import settings
+#from core.config import settings
 from fastapi import FastAPI, HTTPException, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
