@@ -185,9 +185,41 @@ async def general_exception_handler(request: Request, exc: Exception):
         )
 
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
 def root():
-    return {"message": "FastAPI Modular Template is running"}
+    return """
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POデジタル秘書</title>
+        <style>
+            body { font-family: Arial, sans-serif; background:#f5f7fb; margin:0; padding:30px; }
+            .wrap { max-width:1000px; margin:0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+            h1 { color:#1f3c88; margin-top:0; }
+            .grid { display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; margin-top:20px; }
+            a.card {
+                display:block; text-decoration:none; background:#eef3ff; color:#1f3c88;
+                padding:20px; border-radius:10px; font-size:20px; font-weight:bold;
+            }
+            p { color:#555; }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>POデジタル秘書</h1>
+            <p>営業・症例・見積・製作指示をつなぐ業務画面</p>
+
+            <div class="grid">
+                <a class="card" href="/sales">営業登録</a>
+                <a class="card" href="/case">症例入力</a>
+                <a class="card" href="/estimate">見積作成</a>
+                <a class="card" href="/admin">管理画面</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """"FastAPI Modular Template is running"}
 
 
 @app.get("/health")
