@@ -1,0 +1,52 @@
+{
+    "title": "finished_parts_master",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "section": {
+            "type": "string",
+            "description": "セクション (股継手, 膝継手, 足継手, etc.)"
+        },
+        "subcategory": {
+            "type": "string",
+            "description": "サブカテゴリ"
+        },
+        "name": {
+            "type": "string",
+            "description": "部品名"
+        },
+        "part_number": {
+            "type": "string",
+            "description": "型番"
+        },
+        "price": {
+            "type": "integer",
+            "description": "価格"
+        },
+        "source_page": {
+            "type": "integer",
+            "description": "資料ページ"
+        },
+        "manual_confirm": {
+            "type": "string",
+            "description": "確認状態"
+        },
+        "estimate_use": {
+            "type": "string",
+            "description": "見積使用"
+        },
+        "notes": {
+            "type": "string",
+            "description": "備考"
+        }
+    },
+    "required": [
+        "id",
+        "section",
+        "name",
+        "price"
+    ]
+}

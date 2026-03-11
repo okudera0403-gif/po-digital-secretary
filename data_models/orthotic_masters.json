@@ -1,0 +1,35 @@
+{
+    "title": "orthotic_masters",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "category": {
+            "type": "string",
+            "description": "装具カテゴリ (e.g. 短下肢装具, 長下肢装具, 膝装具, 足底装具, 靴型装具)"
+        },
+        "name": {
+            "type": "string",
+            "description": "装具名 (e.g. SHB, KAFO, KO, FO, SHOE)"
+        },
+        "base_price_molding": {
+            "type": "integer",
+            "description": "基本価格（採型）"
+        },
+        "base_price_measurement": {
+            "type": "integer",
+            "description": "基本価格（採寸）"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "表示順"
+        }
+    },
+    "required": [
+        "id",
+        "category",
+        "name"
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "title": "repair_references",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "repair_category": {
+            "type": "string",
+            "description": "Repair category e.g. 下肢装具, 靴型装具, 共通"
+        },
+        "item_name": {
+            "type": "string",
+            "description": "Repair item name"
+        },
+        "price": {
+            "type": "integer",
+            "description": "Repair price in yen"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "Remarks"
+        },
+        "source": {
+            "type": "string",
+            "description": "Data source reference"
+        }
+    },
+    "required": [
+        "id",
+        "item_name",
+        "price"
+    ]
+}

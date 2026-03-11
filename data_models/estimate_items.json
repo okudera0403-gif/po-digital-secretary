@@ -1,0 +1,51 @@
+{
+    "title": "estimate_items",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "estimate_id": {
+            "type": "integer",
+            "description": "Related estimate header ID"
+        },
+        "item_group": {
+            "type": "string",
+            "description": "Group: joint, support, foot, addon, part"
+        },
+        "item_name": {
+            "type": "string",
+            "description": "Item name"
+        },
+        "item_type": {
+            "type": "string",
+            "description": "Item type/variant"
+        },
+        "unit_price": {
+            "type": "integer",
+            "description": "Unit price"
+        },
+        "quantity": {
+            "type": "integer",
+            "description": "Quantity"
+        },
+        "amount": {
+            "type": "integer",
+            "description": "Total amount"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "Remarks"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "estimate_id"
+    ]
+}

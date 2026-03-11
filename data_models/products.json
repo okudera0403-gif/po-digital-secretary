@@ -1,0 +1,50 @@
+{
+    "title": "products",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "category_id": {
+            "type": "integer",
+            "description": "FK to product_categories"
+        },
+        "name": {
+            "type": "string",
+            "description": "Product name"
+        },
+        "product_code": {
+            "type": "string",
+            "description": "Product code e.g. LL001"
+        },
+        "type_variant": {
+            "type": "string",
+            "description": "Type/variant e.g. 金属枠, 硬性"
+        },
+        "structure_notes": {
+            "type": "string",
+            "description": "Basic structure memo"
+        },
+        "durability_years": {
+            "type": "number",
+            "description": "Durability in years"
+        },
+        "description": {
+            "type": "string",
+            "description": "Description or remarks"
+        },
+        "base_price": {
+            "type": "number",
+            "description": "Base price"
+        },
+        "source": {
+            "type": "string",
+            "description": "Data source reference"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}

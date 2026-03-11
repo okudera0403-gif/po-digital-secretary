@@ -1,0 +1,45 @@
+{
+    "title": "instruction_templates",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "product_code": {
+            "type": "string",
+            "description": "Product code reference"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "Product name"
+        },
+        "field_name": {
+            "type": "string",
+            "description": "Field name for the instruction"
+        },
+        "input_type": {
+            "type": "string",
+            "description": "Input type: select or text"
+        },
+        "required_flag": {
+            "type": "integer",
+            "description": "1=required, 0=optional"
+        },
+        "option_values": {
+            "type": "string",
+            "description": "Slash-separated option values for select type"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "Display sort order"
+        }
+    },
+    "required": [
+        "id",
+        "product_code",
+        "field_name",
+        "input_type",
+        "sort_order"
+    ]
+}

@@ -1,0 +1,220 @@
+{
+    "title": "cases",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "case_number": {
+            "type": "string",
+            "description": "Case number"
+        },
+        "case_status": {
+            "type": "string",
+            "description": "Case status"
+        },
+        "case_type": {
+            "type": "string",
+            "description": "Case type"
+        },
+        "case_date": {
+            "type": "string",
+            "description": "Case date"
+        },
+        "order_date": {
+            "type": "string",
+            "description": "Order date"
+        },
+        "fitting_date": {
+            "type": "string",
+            "description": "Fitting date"
+        },
+        "completion_date": {
+            "type": "string",
+            "description": "Completion date"
+        },
+        "delivery_date": {
+            "type": "string",
+            "description": "Delivery date"
+        },
+        "patient_name": {
+            "type": "string",
+            "description": "Patient name"
+        },
+        "patient_age": {
+            "type": "integer",
+            "description": "Patient age"
+        },
+        "patient_dob": {
+            "type": "string",
+            "description": "Patient date of birth"
+        },
+        "gender": {
+            "type": "string",
+            "description": "Gender"
+        },
+        "patient_address": {
+            "type": "string",
+            "description": "Patient address"
+        },
+        "living_situation": {
+            "type": "string",
+            "description": "Living situation"
+        },
+        "facility_name": {
+            "type": "string",
+            "description": "Facility name"
+        },
+        "discharge_estimate": {
+            "type": "string",
+            "description": "Discharge estimate"
+        },
+        "insurance_type_id": {
+            "type": "string",
+            "description": "Insurance type ID"
+        },
+        "insurance_name": {
+            "type": "string",
+            "description": "Insurance name"
+        },
+        "category_id": {
+            "type": "string",
+            "description": "Category ID"
+        },
+        "category_name": {
+            "type": "string",
+            "description": "Category name"
+        },
+        "product_id": {
+            "type": "string",
+            "description": "Product ID"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "Product name"
+        },
+        "side": {
+            "type": "string",
+            "description": "Side"
+        },
+        "disease_name": {
+            "type": "string",
+            "description": "Disease name"
+        },
+        "disability_name": {
+            "type": "string",
+            "description": "Disability name"
+        },
+        "disability_site": {
+            "type": "string",
+            "description": "Disability site"
+        },
+        "disability_detail": {
+            "type": "string",
+            "description": "Disability detail"
+        },
+        "symptoms": {
+            "type": "string",
+            "description": "Symptoms"
+        },
+        "diagnosis": {
+            "type": "string",
+            "description": "Diagnosis"
+        },
+        "height_cm": {
+            "type": "number",
+            "description": "Height cm"
+        },
+        "weight_kg": {
+            "type": "number",
+            "description": "Weight kg"
+        },
+        "usage_location": {
+            "type": "string",
+            "description": "Usage location"
+        },
+        "usage_hours_per_day": {
+            "type": "number",
+            "description": "Usage hours per day"
+        },
+        "usage_days_per_week": {
+            "type": "number",
+            "description": "Usage days per week"
+        },
+        "device_name": {
+            "type": "string",
+            "description": "Device name"
+        },
+        "expected_effect": {
+            "type": "string",
+            "description": "Expected effect"
+        },
+        "parts_used": {
+            "type": "string",
+            "description": "Parts used"
+        },
+        "parts_reason_daily": {
+            "type": "string",
+            "description": "Parts reason daily"
+        },
+        "parts_reason_work": {
+            "type": "string",
+            "description": "Parts reason work"
+        },
+        "parts_reason_other": {
+            "type": "string",
+            "description": "Parts reason other"
+        },
+        "doctor_name": {
+            "type": "string",
+            "description": "Doctor name"
+        },
+        "hospital_name": {
+            "type": "string",
+            "description": "Hospital name"
+        },
+        "department_name": {
+            "type": "string",
+            "description": "Department name"
+        },
+        "bank_transfer": {
+            "type": "boolean",
+            "description": "Bank transfer"
+        },
+        "invoice_needed": {
+            "type": "boolean",
+            "description": "Invoice needed"
+        },
+        "certificate_received": {
+            "type": "boolean",
+            "description": "Certificate received"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "Remarks memo text"
+        },
+        "media_files": {
+            "type": "string",
+            "description": "JSON array of media file objects with object_key, file_name, file_type, visibility"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Created at"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Updated at"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

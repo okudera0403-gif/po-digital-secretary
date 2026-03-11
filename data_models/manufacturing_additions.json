@@ -1,0 +1,31 @@
+{
+    "title": "manufacturing_additions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "加算名称"
+        },
+        "unit": {
+            "type": "string",
+            "description": "単位"
+        },
+        "price": {
+            "type": "integer",
+            "description": "価格"
+        },
+        "source_page": {
+            "type": "integer",
+            "description": "資料ページ"
+        }
+    },
+    "required": [
+        "id",
+        "name",
+        "price"
+    ]
+}

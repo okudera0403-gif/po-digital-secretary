@@ -1,0 +1,39 @@
+{
+    "title": "product_part_rules",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "product_code": {
+            "type": "string",
+            "description": "Product code e.g. LL010"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "Product name for reference"
+        },
+        "required_part_category": {
+            "type": "string",
+            "description": "Required part category e.g. 膝継手"
+        },
+        "necessity": {
+            "type": "string",
+            "description": "必須 or 任意"
+        },
+        "quantity_rule": {
+            "type": "string",
+            "description": "Quantity rule description"
+        },
+        "memo": {
+            "type": "string",
+            "description": "Additional memo"
+        }
+    },
+    "required": [
+        "id",
+        "product_code",
+        "required_part_category"
+    ]
+}

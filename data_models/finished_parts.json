@@ -1,0 +1,53 @@
+{
+    "title": "finished_parts",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "part_group": {
+            "type": "string",
+            "description": "Part group classification"
+        },
+        "part_category": {
+            "type": "string",
+            "description": "Part category"
+        },
+        "part_type": {
+            "type": "string",
+            "description": "Part type/name"
+        },
+        "manufacturer": {
+            "type": "string",
+            "description": "Manufacturer name"
+        },
+        "model_no": {
+            "type": "string",
+            "description": "Model number"
+        },
+        "upper_price": {
+            "type": "integer",
+            "description": "Upper limit price in yen"
+        },
+        "old_price": {
+            "type": "integer",
+            "description": "Old price in yen"
+        },
+        "unit_note": {
+            "type": "string",
+            "description": "Unit/quantity note"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "Remarks"
+        },
+        "source": {
+            "type": "string",
+            "description": "Data source"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

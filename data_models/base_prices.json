@@ -1,0 +1,32 @@
+{
+    "title": "base_prices",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "code": {
+            "type": "string",
+            "description": "Price code like A-1, A-2, etc."
+        },
+        "molding_price": {
+            "type": "integer",
+            "description": "採型価格"
+        },
+        "measurement_price": {
+            "type": "integer",
+            "description": "採寸価格"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "備考"
+        }
+    },
+    "required": [
+        "id",
+        "code",
+        "molding_price",
+        "measurement_price"
+    ]
+}

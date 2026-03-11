@@ -1,0 +1,31 @@
+{
+    "title": "option_masters",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "group_name": {
+            "type": "string",
+            "description": "オプショングループ名 (継手, 足底材料, 材料, 加工, クッション, ベルト)"
+        },
+        "item_name": {
+            "type": "string",
+            "description": "オプション項目名"
+        },
+        "price": {
+            "type": "integer",
+            "description": "価格"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "表示順"
+        }
+    },
+    "required": [
+        "id",
+        "group_name",
+        "item_name"
+    ]
+}

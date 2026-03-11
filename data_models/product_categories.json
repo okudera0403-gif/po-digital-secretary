@@ -1,0 +1,22 @@
+{
+    "title": "product_categories",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Category name e.g. 股装具, 長下肢装具"
+        },
+        "description": {
+            "type": "string",
+            "description": "Category description"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}

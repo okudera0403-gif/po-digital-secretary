@@ -1,0 +1,26 @@
+{
+    "title": "insurance_types",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "name": {
+            "type": "string",
+            "description": "Insurance type name"
+        },
+        "name_en": {
+            "type": "string",
+            "description": "Insurance type name in English"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "Display sort order"
+        }
+    },
+    "required": [
+        "id",
+        "name"
+    ]
+}

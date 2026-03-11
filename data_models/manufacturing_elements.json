@@ -1,0 +1,41 @@
+{
+    "title": "manufacturing_elements",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "category": {
+            "type": "string",
+            "description": "Category code"
+        },
+        "element_group": {
+            "type": "string",
+            "description": "Element group name"
+        },
+        "name": {
+            "type": "string",
+            "description": "Element name"
+        },
+        "spec": {
+            "type": "string",
+            "description": "Specification/type name"
+        },
+        "price": {
+            "type": "integer",
+            "description": "Price in yen"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "Remarks"
+        },
+        "source": {
+            "type": "string",
+            "description": "Data source"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

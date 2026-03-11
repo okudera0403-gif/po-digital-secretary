@@ -1,0 +1,88 @@
+{
+    "title": "estimate_headers",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "case_id": {
+            "type": "integer",
+            "description": "Related case ID"
+        },
+        "category_name": {
+            "type": "string",
+            "description": "Category name e.g. 下肢装具"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "Product name e.g. 短下肢装具"
+        },
+        "product_code": {
+            "type": "string",
+            "description": "Product code"
+        },
+        "type_name": {
+            "type": "string",
+            "description": "Type variant"
+        },
+        "side": {
+            "type": "string",
+            "description": "Left/Right/Both"
+        },
+        "insurance_name": {
+            "type": "string",
+            "description": "Insurance type name"
+        },
+        "base_price": {
+            "type": "integer",
+            "description": "Base manufacturing element total"
+        },
+        "joint_total": {
+            "type": "integer",
+            "description": "Joint total"
+        },
+        "support_total": {
+            "type": "integer",
+            "description": "Support total"
+        },
+        "foot_total": {
+            "type": "integer",
+            "description": "Foot part total"
+        },
+        "addon_total": {
+            "type": "integer",
+            "description": "Addon total"
+        },
+        "parts_total": {
+            "type": "integer",
+            "description": "Finished parts total"
+        },
+        "grand_total": {
+            "type": "integer",
+            "description": "Grand total"
+        },
+        "notes": {
+            "type": "string",
+            "description": "Notes/摘要"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Created at"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Updated at"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

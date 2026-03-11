@@ -1,0 +1,64 @@
+{
+    "title": "estimates",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "case_id": {
+            "type": "integer",
+            "description": "症例ID"
+        },
+        "category_name": {
+            "type": "string",
+            "description": "カテゴリ名"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "製品名"
+        },
+        "molding_type": {
+            "type": "string",
+            "description": "採型区分"
+        },
+        "sub_type": {
+            "type": "string",
+            "description": "下位区分"
+        },
+        "price_mode": {
+            "type": "string",
+            "description": "価格入力方式"
+        },
+        "base_price": {
+            "type": "number",
+            "description": "基本価格"
+        },
+        "surcharge_items": {
+            "type": "string",
+            "description": "加算要素JSON"
+        },
+        "total_price": {
+            "type": "number",
+            "description": "見積合計"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "作成日時"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "更新日時"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

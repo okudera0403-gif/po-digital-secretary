@@ -1,0 +1,57 @@
+{
+    "title": "product_price_rules",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "category_name": {
+            "type": "string",
+            "description": "カテゴリ名"
+        },
+        "product_name": {
+            "type": "string",
+            "description": "製品名"
+        },
+        "molding_type": {
+            "type": "string",
+            "description": "採型区分"
+        },
+        "sub_type": {
+            "type": "string",
+            "description": "下位区分"
+        },
+        "price_input_mode": {
+            "type": "string",
+            "description": "価格入力方式（採型/採寸）"
+        },
+        "base_price_molding": {
+            "type": "number",
+            "description": "基本価格（採型）"
+        },
+        "base_price_measurement": {
+            "type": "number",
+            "description": "基本価格（採寸）"
+        },
+        "surcharge_label": {
+            "type": "string",
+            "description": "加算要素名"
+        },
+        "surcharge_price": {
+            "type": "number",
+            "description": "加算金額"
+        },
+        "remarks": {
+            "type": "string",
+            "description": "備考"
+        },
+        "source": {
+            "type": "string",
+            "description": "データソース"
+        }
+    },
+    "required": [
+        "id"
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "title": "drafts",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "draft_data": {
+            "type": "string",
+            "description": "JSON string of the full form state"
+        },
+        "case_number": {
+            "type": "string",
+            "description": "Optional case number"
+        },
+        "draft_status": {
+            "type": "string",
+            "description": "Status: draft or final"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Created timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Updated timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "title": "parts",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "product_id": {
+            "type": "integer",
+            "description": "Foreign key to products"
+        },
+        "name": {
+            "type": "string",
+            "description": "Part name"
+        },
+        "description": {
+            "type": "string",
+            "description": "Part description"
+        },
+        "price": {
+            "type": "number",
+            "description": "Part price"
+        },
+        "part_type": {
+            "type": "string",
+            "description": "Part type"
+        },
+        "maker": {
+            "type": "string",
+            "description": "Manufacturer/maker name"
+        },
+        "ministry_registered": {
+            "type": "boolean",
+            "description": "Whether the part is ministry registered"
+        }
+    },
+    "required": [
+        "id",
+        "product_id",
+        "name"
+    ]
+}

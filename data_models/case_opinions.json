@@ -1,0 +1,157 @@
+{
+    "title": "case_opinions",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "case_id": {
+            "type": "integer",
+            "description": "Reference to cases table"
+        },
+        "opinion_type_purchase": {
+            "type": "boolean",
+            "description": "購入"
+        },
+        "opinion_type_repair": {
+            "type": "boolean",
+            "description": "修理（交換）"
+        },
+        "opinion_type_loan": {
+            "type": "boolean",
+            "description": "借受け"
+        },
+        "opinion_type_special": {
+            "type": "boolean",
+            "description": "特例"
+        },
+        "disease_name": {
+            "type": "string",
+            "description": "1-① 病名"
+        },
+        "disability_name_part": {
+            "type": "string",
+            "description": "1-② 障害名・障害部位"
+        },
+        "disability_condition": {
+            "type": "string",
+            "description": "2. 障害状況"
+        },
+        "height_cm": {
+            "type": "number",
+            "description": "3. 身長cm"
+        },
+        "weight_kg": {
+            "type": "number",
+            "description": "3. 体重kg"
+        },
+        "usage_place_home": {
+            "type": "boolean",
+            "description": "4-① 自宅"
+        },
+        "usage_place_work": {
+            "type": "boolean",
+            "description": "4-① 職場"
+        },
+        "usage_place_facility": {
+            "type": "boolean",
+            "description": "4-① 施設"
+        },
+        "usage_place_school": {
+            "type": "boolean",
+            "description": "4-① 学校"
+        },
+        "usage_place_other": {
+            "type": "boolean",
+            "description": "4-① その他"
+        },
+        "usage_place_other_text": {
+            "type": "string",
+            "description": "4-① その他テキスト"
+        },
+        "frequency_per_day": {
+            "type": "string",
+            "description": "4-② 1日あたり"
+        },
+        "frequency_per_week": {
+            "type": "string",
+            "description": "4-② 1週あたり"
+        },
+        "orthosis_name": {
+            "type": "string",
+            "description": "5. 補装具名称"
+        },
+        "expected_effect": {
+            "type": "string",
+            "description": "6. 効果見込み"
+        },
+        "parts_text": {
+            "type": "string",
+            "description": "7-① 使用部品"
+        },
+        "reason_daily_life_checked": {
+            "type": "boolean",
+            "description": "7-② 日常生活チェック"
+        },
+        "reason_daily_life": {
+            "type": "string",
+            "description": "7-② 日常生活理由"
+        },
+        "reason_work_school_checked": {
+            "type": "boolean",
+            "description": "7-② 就労就学チェック"
+        },
+        "reason_work_school": {
+            "type": "string",
+            "description": "7-② 就労就学理由"
+        },
+        "reason_other_checked": {
+            "type": "boolean",
+            "description": "7-② その他チェック"
+        },
+        "reason_other": {
+            "type": "string",
+            "description": "7-② その他理由"
+        },
+        "doctor_name": {
+            "type": "string",
+            "description": "医師名"
+        },
+        "department_name": {
+            "type": "string",
+            "description": "診療科"
+        },
+        "medical_institution": {
+            "type": "string",
+            "description": "医療機関"
+        },
+        "opinion_date": {
+            "type": "string",
+            "description": "意見書日付"
+        },
+        "generated_draft": {
+            "type": "string",
+            "description": "AI生成結果テキスト"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "作成日時"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "更新日時"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "case_id"
+    ]
+}
