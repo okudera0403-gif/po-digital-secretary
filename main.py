@@ -290,3 +290,200 @@ async def admin_ui():
     </body>
     </html>
     """
+from fastapi.responses import HTMLResponse
+
+
+@app.get("/sales", response_class=HTMLResponse)
+async def sales_page():
+    return """
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>案件登録 | POデジタル秘書</title>
+        <style>
+            body { font-family: Arial, sans-serif; background:#f5f7fb; margin:0; padding:30px; }
+            .wrap { max-width:900px; margin:0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+            h1 { margin-top:0; color:#1f3c88; }
+            .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+            label { display:block; font-weight:bold; margin-bottom:6px; }
+            input, select, textarea {
+                width:100%; padding:10px; border:1px solid #d0d7e2; border-radius:8px; box-sizing:border-box;
+            }
+            .full { grid-column:1 / -1; }
+            .actions { margin-top:24px; display:flex; gap:12px; }
+            button, a.btn {
+                background:#1f3c88; color:#fff; border:none; padding:12px 18px; border-radius:8px; text-decoration:none; cursor:pointer;
+            }
+            a.sub { color:#1f3c88; text-decoration:none; }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <p><a class="sub" href="/">← トップへ戻る</a></p>
+            <h1>案件登録</h1>
+
+            <div class="grid">
+                <div>
+                    <label>管理番号</label>
+                    <input placeholder="例: PO-2026-0001">
+                </div>
+                <div>
+                    <label>受付日</label>
+                    <input type="date">
+                </div>
+
+                <div>
+                    <label>担当営業</label>
+                    <input placeholder="担当営業名">
+                </div>
+                <div>
+                    <label>担当技術者</label>
+                    <input placeholder="担当技術者名">
+                </div>
+
+                <div>
+                    <label>医療機関名</label>
+                    <input placeholder="病院名">
+                </div>
+                <div>
+                    <label>医師名</label>
+                    <input placeholder="医師名">
+                </div>
+
+                <div>
+                    <label>区分</label>
+                    <select>
+                        <option>新規</option>
+                        <option>再作</option>
+                        <option>修理</option>
+                    </select>
+                </div>
+                <div>
+                    <label>左右</label>
+                    <select>
+                        <option>左</option>
+                        <option>右</option>
+                        <option>両側</option>
+                    </select>
+                </div>
+
+                <div class="full">
+                    <label>備考</label>
+                    <textarea rows="4" placeholder="自由記載"></textarea>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button>保存（仮）</button>
+                <a class="btn" href="/case">症例入力へ進む</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
+
+
+@app.get("/case", response_class=HTMLResponse)
+async def case_page():
+    return """
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>症例入力 | POデジタル秘書</title>
+        <style>
+            body { font-family: Arial, sans-serif; background:#f5f7fb; margin:0; padding:30px; }
+            .wrap { max-width:900px; margin:0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+            h1 { margin-top:0; color:#1f3c88; }
+            .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+            label { display:block; font-weight:bold; margin-bottom:6px; }
+            input, select, textarea {
+                width:100%; padding:10px; border:1px solid #d0d7e2; border-radius:8px; box-sizing:border-box;
+            }
+            .full { grid-column:1 / -1; }
+            .actions { margin-top:24px; display:flex; gap:12px; }
+            button, a.btn {
+                background:#1f3c88; color:#fff; border:none; padding:12px 18px; border-radius:8px; text-decoration:none; cursor:pointer;
+            }
+            a.sub { color:#1f3c88; text-decoration:none; }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <p><a class="sub" href="/">← トップへ戻る</a></p>
+            <h1>症例入力</h1>
+
+            <div class="grid">
+                <div>
+                    <label>疾患名</label>
+                    <input placeholder="例: 脳卒中後片麻痺">
+                </div>
+                <div>
+                    <label>診断名</label>
+                    <input placeholder="診断名">
+                </div>
+
+                <div>
+                    <label>麻痺の有無</label>
+                    <select>
+                        <option>あり</option>
+                        <option>なし</option>
+                    </select>
+                </div>
+                <div>
+                    <label>拘縮の有無</label>
+                    <select>
+                        <option>あり</option>
+                        <option>なし</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>左右</label>
+                    <select>
+                        <option>左</option>
+                        <option>右</option>
+                        <option>両側</option>
+                    </select>
+                </div>
+                <div>
+                    <label>採型 / 採寸</label>
+                    <select>
+                        <option>採型</option>
+                        <option>採寸</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>使用目的</label>
+                    <select>
+                        <option>歩行安定</option>
+                        <option>尖足予防</option>
+                        <option>内反矯正</option>
+                        <option>膝折れ防止</option>
+                    </select>
+                </div>
+                <div>
+                    <label>想定装具</label>
+                    <select>
+                        <option>短下肢装具</option>
+                        <option>SHB</option>
+                        <option>SLB</option>
+                    </select>
+                </div>
+
+                <div class="full">
+                    <label>特記事項</label>
+                    <textarea rows="5" placeholder="症例の詳細、医師指示、注意点など"></textarea>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button>保存（仮）</button>
+                <a class="btn" href="/estimate">見積作成へ進む</a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
