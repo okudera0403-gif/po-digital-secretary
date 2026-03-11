@@ -251,3 +251,42 @@ if __name__ == "__main__":
             port=int(settings.port),
             reload_excludes=["**/*.py"],
         )
+# --- Admin UI -------------------------------------------------
+
+from fastapi.responses import HTMLResponse
+
+@app.get("/admin", response_class=HTMLResponse)
+async def admin_ui():
+    return """
+    <html>
+    <head>
+        <title>POデジタル秘書 管理画面</title>
+        <style>
+            body { font-family: Arial; background:#f4f6f8; padding:40px; }
+            h1 { color:#333; }
+            .card { background:white; padding:20px; margin:20px 0; border-radius:8px; }
+            a { text-decoration:none; color:#2563eb; font-size:18px; }
+        </style>
+    </head>
+    <body>
+        <h1>POデジタル秘書 管理画面</h1>
+
+        <div class="card">
+            <a href="/cases">症例管理</a>
+        </div>
+
+        <div class="card">
+            <a href="/estimates">見積管理</a>
+        </div>
+
+        <div class="card">
+            <a href="/parts">部品マスター</a>
+        </div>
+
+        <div class="card">
+            <a href="/products">装具マスター</a>
+        </div>
+
+    </body>
+    </html>
+    """
