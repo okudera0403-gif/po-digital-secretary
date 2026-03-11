@@ -484,6 +484,86 @@ async def case_page():
                 <a class="btn" href="/estimate">見積作成へ進む</a>
             </div>
         </div>
+        @app.get("/estimate", response_class=HTMLResponse)
+async def estimate_page():
+    return """
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>見積作成 | POデジタル秘書</title>
+        <style>
+            body { font-family: Arial, sans-serif; background:#f5f7fb; margin:0; padding:30px; }
+            .wrap { max-width:900px; margin:0 auto; background:#fff; padding:24px; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+            h1 { margin-top:0; color:#1f3c88; }
+            .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+            label { display:block; font-weight:bold; margin-bottom:6px; }
+            input, select {
+                width:100%; padding:10px; border:1px solid #d0d7e2; border-radius:8px; box-sizing:border-box;
+            }
+            .full { grid-column:1 / -1; }
+            .total { background:#eef3ff; padding:16px; border-radius:10px; margin-top:20px; }
+            button {
+                background:#1f3c88; color:white; border:none; padding:12px 18px; border-radius:8px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h1>見積作成</h1>
+
+            <div class="grid">
+                <div>
+                    <label>装具種類</label>
+                    <select>
+                        <option>短下肢装具</option>
+                        <option>SHB</option>
+                        <option>SLB</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>採型 / 採寸</label>
+                    <select>
+                        <option>採型</option>
+                        <option>採寸</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>継手</label>
+                    <input placeholder="継手名">
+                </div>
+
+                <div>
+                    <label>支柱</label>
+                    <input placeholder="支柱名">
+                </div>
+
+                <div>
+                    <label>足部</label>
+                    <input placeholder="足部">
+                </div>
+
+                <div>
+                    <label>加算</label>
+                    <input placeholder="加算項目">
+                </div>
+            </div>
+
+            <div class="total">
+                <p>基本価格: 0 円</p>
+                <p>部品合計: 0 円</p>
+                <p>加算合計: 0 円</p>
+                <h3>見積総額: 0 円</h3>
+            </div>
+
+            <br>
+            <button>見積保存（仮）</button>
+
+        </div>
+    </body>
+    </html>
+    """
     </body>
     </html>
     """
