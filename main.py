@@ -567,3 +567,82 @@ async def estimate_page():
     </body>
     </html>
     """
+from fastapi.responses import HTMLResponse
+
+@app.get("/", response_class=HTMLResponse)
+async def home():
+    return """
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POデジタル秘書</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                background: #f5f7fb;
+                color: #222;
+            }
+            .header {
+                background: #1f3c88;
+                color: white;
+                padding: 24px;
+            }
+            .header h1 {
+                margin: 0;
+            }
+            .container {
+                max-width: 1000px;
+                margin: 24px auto;
+                padding: 0 16px;
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 16px;
+            }
+            .card {
+                background: white;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+                text-decoration: none;
+                color: inherit;
+                border: 1px solid #e5e7eb;
+            }
+            .card h2 {
+                margin-top: 0;
+                color: #1f3c88;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>POデジタル秘書</h1>
+            <p>営業・症例・見積・製作指示をつなぐ業務支援システム</p>
+        </div>
+        <div class="container">
+            <div class="grid">
+                <a class="card" href="/sales">
+                    <h2>営業登録</h2>
+                    <p>案件の基本情報を登録します。</p>
+                </a>
+                <a class="card" href="/case">
+                    <h2>症例入力</h2>
+                    <p>疾患・左右・採型/採寸などを入力します。</p>
+                </a>
+                <a class="card" href="/estimate">
+                    <h2>見積作成</h2>
+                    <p>装具・部品・加算をもとに見積を作成します。</p>
+                </a>
+                <a class="card" href="/admin">
+                    <h2>管理画面</h2>
+                    <p>管理用ページへ移動します。</p>
+                </a>
+            </div>
+        </div>
+    </body>
+    </html>
+    """
