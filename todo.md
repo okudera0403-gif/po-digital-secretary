@@ -1,16 +1,58 @@
-# 下肢装具見積システム - マスターデータ全面更新
+# PO Digital Secretary - Development Plan
 
-## 完了済み
-- [x] 新テーブル作成: base_prices, manufacturing_joints, manufacturing_supports, manufacturing_additions, finished_parts_master
-- [x] Excelデータ投入: 基本価格(10件), 継手(8件), 支持部(19件), 加算(18件), 完成用部品(11件)
+## Design Guidelines
 
-## 実装タスク
-- [ ] EstimatePage.tsx を新しいデータ構造に合わせて全面書き換え
-  - Step①: 基本価格コード選択 (A-1〜A-10) + 価格方式 (採型/採寸)
-  - Step②: 製作要素_継手 選択 (チェックボックス + 数量)
-  - Step③: 製作要素_支持部 選択 (チェックボックス + 数量)
-  - Step④: 製作要素_加算 選択 (チェックボックス + 数量)
-  - Step⑤: 完成用部品 選択 (検索 + チェックボックス)
-  - 見積内訳サマリー + 合計金額
-  - 保存機能
-- [ ] lint & build 確認
+### Design References
+- **Medical/Clinical SaaS**: Clean, professional, trustworthy
+- **Style**: Modern Professional Medical + Light Theme
+
+### Color Palette
+- Primary: #1E40AF (Medical Blue)
+- Secondary: #F0F9FF (Light Blue Background)
+- Accent: #059669 (Success Green)
+- Warning: #D97706 (Amber)
+- Background: #F8FAFC (Light Gray)
+- Card: #FFFFFF (White)
+- Text Primary: #1E293B (Dark Slate)
+- Text Secondary: #64748B (Slate)
+
+### Typography
+- Font: Inter (clean, professional sans-serif)
+- Headings: font-weight 700
+- Body: font-weight 400
+
+### Key Component Styles
+- Cards: White background, subtle shadow, 8px rounded
+- Buttons: Blue primary, rounded-md
+- Tables: Clean borders, alternating row colors
+- Forms: Clean inputs with labels
+
+## Database Tables (Created)
+- insurance_types (11 records)
+- product_categories (5 records)
+- products (10 records)
+- parts (30 records)
+- cases (user-owned)
+
+## Files to Create
+
+### Frontend Pages (8 files max)
+1. `src/pages/Index.tsx` - Main dashboard with login gate, case list, navigation
+2. `src/pages/CaseForm.tsx` - Case input form (create/edit)
+3. `src/pages/CaseList.tsx` - Case list table with actions
+4. `src/pages/ManufacturingInstruction.tsx` - Manufacturing instruction with PDF export
+5. `src/pages/EstimateGeneration.tsx` - Estimate generation with PDF export
+6. `src/pages/AIMedicalOpinion.tsx` - AI medical opinion draft generation
+7. `src/pages/PartsSearch.tsx` - Parts search by category/product
+8. `src/components/Layout.tsx` - Shared layout with navigation sidebar
+
+### App Configuration
+- `src/App.tsx` - Routes setup
+- `index.html` - Title update
+
+## Implementation Notes
+- Use jspdf for PDF generation
+- Use web-sdk client.ai.gentxt with deepseek-v3.2 for AI medical opinion
+- Use web-sdk client.auth for login
+- Use web-sdk client.entities for CRUD operations
+- All text in Japanese for UI labels
