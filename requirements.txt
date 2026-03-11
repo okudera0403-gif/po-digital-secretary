@@ -1,3 +1,4 @@
+Installing requirements
+Build successful
+Starting service
 
-# auth module dependencies
-axios@1.6.0
